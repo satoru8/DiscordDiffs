@@ -1,0 +1,90 @@
+.appMount-3VJmYg -> .appMount-3lHmkl   /  #app-mount
+.avatar-small -> .avatarSmall-3ACRaI
+.xxlarge-1R_NA5 -> .large-3ChYtB
+
+
+/* Friends Section */
+
+#friends -> .container-3gCOGc
+.tab-bar -> .tabBar-1E2ExX
+.tab-bar-item-primary -> .primary-3j8BhM
+.tab-bar-separator -> .separator-gCa7yv
+.tab-bar-item -> .item-3HpYcP
+.selected -> .itemSelected-1qLhcL
+.itemDefault-3Jdr52 .notSelected-1N1G5p
+.badge -> .badge-xFJoEU
+
+.friends-table -> .friendsTable-133bsv
+.friends-table-header -> .friendsTableHeader-32yE7d
+.friends-table-body -> .friendsTableBody-1ZhKif
+.friends-row -> .friendsRow-2yicud
+.friends-column -> .friendsColumn-eVHFqJ
+.friends-column-name - > .friendsColumnName-1zBOKm
+.friends-column-separator -> .friendsColumnSeparator-3MqtMA
+.friends-column-status -> .friendsColumnStatus-ZH4ho2
+.friends-column-guilds -> .friendsColumnGuilds-2we6jb
+.friends-column-actions -> .friendsColumnActions-1LT3_M
+.friends-action -> .friendsAction-__WNE9
+.friends-action-video-call -> .friendsActionVideoCall-2_PKeP
+.friends-action-voice-call -> .friendsActionVoiceCall-3EdPsR
+.friends-action-remove -> .friendsActionRemove-qu8nnl
+.friends-action-accept -> .friendsActionAccept-3mkemT
+.friends-action-ignore -> .friendsActionIgnore-1-RPlq
+
+/* Search bar */
+.search -> .search-2oPWTC
+.open -> .open-6_Y_aH
+.focused -> .focused-31_ccS
+.search-bar -> .searchBar-2_Yu-C
+.search-bar-icon -> .searchBarIcon-1J6sKG
+.icon -> icon-3cZ1F_
+.icon-search-bar-eye-glass -> .iconSearchBarEyeGlass-2n38zb
+.icon-search-bar-clear.visible -> .iconSearchBarClear-2DW-Kr.visible-3V0mGj
+.search-bar-light -> .searchBarLight-1NxoDG
+.search-bar-inner -> .searchBarInner-1_Tg2R
+
+/* Search menu */
+.qs-tutorial.shown -> .tutorial-3igfYb.shown-3PNP1p
+
+.search-results-wrap -> .searchResultsWrap-2DKFzt
+.search-header -> .searchHeader-1l-wpR
+.total-results -> .totalResults-gxvzgw
+.tab -> .tab-2Ixsn0
+.selected -> .selected-16te-P
+.results-wrapper -> .resultsWrapper-hoiXCY
+.search-results -> .searchResults-2J8dju
+.channel-separator -> .channelSeparator-1X1FuH
+.channel-name -> .channelName-1QajIf
+.search-result -> .searchResult-3pzFAB
+.search-result-message -> .searchResultMessage-2VxO12
+.hit -> .hit-NLlWXA
+.sibling -> .sibling-3tUBeh
+.before -> .before-1x1q5S
+.after -> after-2g0jjc
+.pagination -> .pagination-eQpqgk
+.pagination-previous -> .paginationPrevious-4Yw0Tk
+.disabled -> .disabled-AFY2aL
+.pagination-next -> .paginationNext-3Tefao
+.action-buttons -> .actionButtons-14P9IC
+.jump-button -> .jumpButton-Ia2hRJ
+.empty-results-wrap -> .emptyResultsWrap-3Kv0LQ
+.empty-results-content -> .emptyResultsContent-3I31NQ
+.no-results-image -> .noResultsImage-JbSWtu
+.alt -> .alt-1RXaBT
+
+/* Guilds Scroller */
+.scroller > .scroller-2FKFPG
+.scroller-wrap  > .scrollerWrap-2lJEkd
+
+/* Tooltips */
+.tooltips -> .tooltips-FhwIyl
+.tooltip -> .tooltip-1OS-Ti
+.tooltip-right -> .right-KM_vfY
+.tooltip-black -> .black-2bmmnj
+.tooltip-bottom -> .bottom-19kp6S
+.tooltip-brand -> .brand-3tBTjG
+.tooltip-green -> .green-hbUqD5
+.tooltip-left -> .left-1wV7VO
+.tooltip-red -> .red-m6f4-H
+.tooltip-top -> .top-1pTh1F
+.tooltip-yellow -> .yellow-1oq44m

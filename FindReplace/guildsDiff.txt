@@ -1,0 +1,38 @@
+    ===== 3/4/19 =====
+
+.guildsWrapper-5TJh6A -> .wrapper-1Rf91z
+.unreadMentionsIndicatorTop-gA6RCh -> Unchanged
+.unreadMentionsBar-1VrBNe -> Unchanged
+.unread-1xRYoj -> Unchanged
+.bar-30k2ka -> Unchanged
+.guilds-1q_RqH -> .scroller-2TZvBN
+
+    ===== Home Container =====
+    
+.container-1ETFDs -> New
+.homeButton-2Cw51C -> New
+.homeLink-2NBBKi -> New
+.homeIcon-1FoKUJ -> .homeIcon-tEMBK1
+
+    ===== Home Container End =====
+    
+.friendsOnline-_wi_fM -> .friendsOnline-2JkivW
+.guildSeparator-1X4GQ1 -> .guildSeparator-3s64Iy
+.guild-1EfMGQ -> .container-2td-dC
+.dragfix-1wSxtO -> New
+.guildInner-3DSoA4 -> .wrapper-2lTRaf
+.guildIcon-CT-ZDq -> .guildIcon-VlWW86
+.selected-ML3OIq -> .selected-nT-gM3
+.unread-qLkInr -> .unread-2OHH1w
+.downloadAppButton-3EFlA6 -> .downloadAppButton-3FZHkU
+.audio-3vVhBi -> .audio-2KA0-x, .audio-3sNR7M (DM)
+.video-15yGu3 -> .video-2jNDI4, .video-3I9W8t (DM)
+.guildsAdd-21_IdK -> .circleIconButton-jET_ig
+.guildsAddInner-1KMFy-  -> .plus-3UqSQu
+.container-11WMXy -> New Discorvery Container
+.guildsDiscover-oiBX_l -> .container-11WMXy .circleIconButton-jET_ig
+.newBadge-lwNGDB -> New Icon Guilds Discorvery.
+.unreadMentionsIndicatorBottom-BXS58x -> Unchanged
+.guildsError-3cFMtY -> .guildsError-b7zR5H
+.guildsErrorContainer-2uWYsE
+.dms-rcsEnV -> .container-1aNBdK

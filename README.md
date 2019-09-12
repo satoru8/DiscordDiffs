@@ -7,6 +7,7 @@ Feel free to contribute to this repo in any way. Even if it's suggesting a new c
 I might make releases but generally, you should simply download the HTML file "fullDiff", or "diffClasses"
 
 The 'Find > Replace' is something that I do manually. It takes much more time and I don't care to be doing that type of diff anymore. 
-This is where the new diffClasses.htm come into play.
+This is where the new diffClasses.htm come in.
 
+Some of them have his colour scheme. new ones might be simple default github style
 ![Diff Colour Scheme](/Assets/colourSchemeWM.png "Diff Colour Scheme")

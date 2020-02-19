@@ -1,0 +1,515 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WinMerge File Compare Report</title>
+<style type="text/css">
+<!--
+td,th {word-break: break-all; font-size: 12pt;}
+tr { vertical-align: top; }
+.border { border-radius: 6px; border: 1px #a0a0a0 solid; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); overflow: hidden; }
+.ln {text-align: right; word-break: normal; background-color: lightgrey; box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.10);}
+.title {color: white; background-color: blue; vertical-align: top; padding: 4px 4px; background: linear-gradient(mediumblue, darkblue);}
+.sf3b2 {color: #000000; background-color: #ffffff; }
+.sf3b5 {color: #000000; background-color: #3399ff; }
+.sf3b14 {color: #000000; background-color: #ffaaaa; }
+.sf3b16 {color: #000000; background-color: #ff28ff; }
+.sf3b18 {color: #000000; background-color: #ff5959; }
+.sf3b19 {color: #000000; background-color: #e6968c; }
+.sf6b2 {color: #ffffff; background-color: #ffffff; }
+.sf6b5 {color: #ffffff; background-color: #3399ff; }
+.sf6b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf6b16 {color: #ffffff; background-color: #ff28ff; }
+.sf6b18 {color: #ffffff; background-color: #ff5959; }
+.sf6b19 {color: #ffffff; background-color: #e6968c; }
+.sf7b2 {color: #0000ff; background-color: #ffffff; font-weight: bold; }
+.sf7b5 {color: #0000ff; background-color: #3399ff; font-weight: bold; }
+.sf7b14 {color: #0000ff; background-color: #ffaaaa; font-weight: bold; }
+.sf7b16 {color: #0000ff; background-color: #ff28ff; font-weight: bold; }
+.sf7b18 {color: #0000ff; background-color: #ff5959; font-weight: bold; }
+.sf7b19 {color: #0000ff; background-color: #e6968c; font-weight: bold; }
+.sf8b2 {color: #800080; background-color: #ffffff; }
+.sf8b5 {color: #800080; background-color: #3399ff; }
+.sf8b14 {color: #800080; background-color: #ffaaaa; }
+.sf8b16 {color: #800080; background-color: #ff28ff; }
+.sf8b18 {color: #800080; background-color: #ff5959; }
+.sf8b19 {color: #800080; background-color: #e6968c; }
+.sf9b2 {color: #008000; background-color: #ffffff; }
+.sf9b5 {color: #008000; background-color: #3399ff; }
+.sf9b14 {color: #008000; background-color: #ffaaaa; }
+.sf9b16 {color: #008000; background-color: #ff28ff; }
+.sf9b18 {color: #008000; background-color: #ff5959; }
+.sf9b19 {color: #008000; background-color: #e6968c; }
+.sf10b2 {color: #ff0000; background-color: #ffffff; }
+.sf10b5 {color: #ff0000; background-color: #3399ff; }
+.sf10b14 {color: #ff0000; background-color: #ffaaaa; }
+.sf10b16 {color: #ff0000; background-color: #ff28ff; }
+.sf10b18 {color: #ff0000; background-color: #ff5959; }
+.sf10b19 {color: #ff0000; background-color: #e6968c; }
+.sf11b2 {color: #606060; background-color: #ffffff; }
+.sf11b5 {color: #606060; background-color: #3399ff; }
+.sf11b14 {color: #606060; background-color: #ffaaaa; }
+.sf11b16 {color: #606060; background-color: #ff28ff; }
+.sf11b18 {color: #606060; background-color: #ff5959; }
+.sf11b19 {color: #606060; background-color: #e6968c; }
+.sf12b2 {color: #800000; background-color: #ffffff; }
+.sf12b5 {color: #800000; background-color: #3399ff; }
+.sf12b14 {color: #800000; background-color: #ffaaaa; }
+.sf12b16 {color: #800000; background-color: #ff28ff; }
+.sf12b18 {color: #800000; background-color: #ff5959; }
+.sf12b19 {color: #800000; background-color: #e6968c; }
+.sf13b2 {color: #0080c0; background-color: #ffffff; }
+.sf13b5 {color: #0080c0; background-color: #3399ff; }
+.sf13b14 {color: #0080c0; background-color: #ffaaaa; }
+.sf13b16 {color: #0080c0; background-color: #ff28ff; }
+.sf13b18 {color: #0080c0; background-color: #ff5959; }
+.sf13b19 {color: #0080c0; background-color: #e6968c; }
+.sf15b2 {color: #ffffff; background-color: #ffffff; }
+.sf15b5 {color: #ffffff; background-color: #3399ff; }
+.sf15b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf15b16 {color: #ffffff; background-color: #ff28ff; }
+.sf15b18 {color: #ffffff; background-color: #ff5959; }
+.sf15b19 {color: #ffffff; background-color: #e6968c; }
+.sf17b2 {color: #ffffff; background-color: #ffffff; }
+.sf17b5 {color: #ffffff; background-color: #3399ff; }
+.sf17b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf17b16 {color: #ffffff; background-color: #ff28ff; }
+.sf17b18 {color: #ffffff; background-color: #ff5959; }
+.sf17b19 {color: #ffffff; background-color: #e6968c; }
+.sf20b2 {color: #000080; background-color: #ffffff; }
+.sf20b5 {color: #000080; background-color: #3399ff; }
+.sf20b14 {color: #000080; background-color: #ffaaaa; }
+.sf20b16 {color: #000080; background-color: #ff28ff; }
+.sf20b18 {color: #000080; background-color: #ff5959; }
+.sf20b19 {color: #000080; background-color: #e6968c; }
+.sf21b2 {color: #0080c0; background-color: #ffffff; }
+.sf21b5 {color: #0080c0; background-color: #3399ff; }
+.sf21b14 {color: #0080c0; background-color: #ffaaaa; }
+.sf21b16 {color: #0080c0; background-color: #ff28ff; }
+.sf21b18 {color: #0080c0; background-color: #ff5959; }
+.sf21b19 {color: #0080c0; background-color: #e6968c; }
+-->
+</style>
+</head>
+<body>
+<div class="border"><table cellspacing="0" cellpadding="0" style="width: 100%; margin: 0; border: none;">
+<thead>
+<tr>
+<th class="title" style="width:1%"></th><th class="title" style="width:49.000000%">C:\Users\Katsu\Desktop\BD\DiscordDiffs\2-13-20\stable2-13-20.css</th>
+<th class="title" style="width:1%"></th><th class="title" style="width:49.000000%">C:\Users\Katsu\Desktop\BD\DiscordDiffs\2-13-20\stableNew2-13-20.css</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ln">7510</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">4f545c</span></code></td>
+<td class="ln">7510</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">4f545c</span></code></td>
+</tr>
+<tr>
+<td class="ln">7511</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7511</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7512</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7512</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7513</td><td class="sf3b2"><code><span class="sf3b2">.theme-light</span><span class="sf11b2"> </span><span class="sf3b2">.appleRowBody-2B5tp2</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7513</td><td class="sf3b2"><code><span class="sf3b2">.theme-light</span><span class="sf11b2"> </span><span class="sf3b2">.appleRowBody-2B5tp2</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">7514</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">747f8d</span></code></td>
+<td class="ln">7514</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">747f8d</span></code></td>
+</tr>
+<tr>
+<td class="ln">7515</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7515</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7516</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7516</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7517</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.paymentPane-3bwJ6A</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7517</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.paymentPane-3bwJ6A</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">7518</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: #</span><span class="sf12b2">2f3136</span><span class="sf11b2">;</span></code></td>
+<td class="ln">7518</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: #</span><span class="sf12b2">2f3136</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d1" href="#d1">.</a>7519</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">f6f6f7</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">7519</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">f6f6f7</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7520</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7520</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7521</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7521</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7522</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.paginator-166-09</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7522</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.paginator-166-09</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d2" href="#d2">.</a>7523</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">2f3136</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">7523</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">2f3136</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7524</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7524</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7525</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7525</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7526</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.bottomDivider-1K9Gao</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7526</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.bottomDivider-1K9Gao</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d3" href="#d3">.</a>7527</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #0080c0; background-color: #ddffdd; ">border-bottom-color</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">36393f</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">7527</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #0080c0; background-color: #ddffdd; ">border-bottom-color</span><span style="color: #606060; background-color: #ddffdd; ">: #</span><span style="color: #800000; background-color: #ddffdd; ">36393f</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7528</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7528</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7529</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7529</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7530</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.tab-1kx2RU</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7530</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.tab-1kx2RU</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">7531</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">72767d</span></code></td>
+<td class="ln">7531</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">72767d</span></code></td>
+</tr>
+<tr>
+<td class="ln">7532</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7532</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">7533</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">7533</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">7534</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.appleRowHeader-241O5v</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">7534</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.appleRowHeader-241O5v</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">7535</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">dcddde</span></code></td>
+<td class="ln">7535</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: #</span><span class="sf12b2">dcddde</span></code></td>
+</tr>
+<tr>
+<td class="ln">7536</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">7536</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">15828</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.content-3at_AU</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15828</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.content-3at_AU</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">15829</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--background-modifier-selected)</span></code></td>
+<td class="ln">15829</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--background-modifier-selected)</span></code></td>
+</tr>
+<tr>
+<td class="ln">15830</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15830</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15831</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15831</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15832</td><td class="sf3b2"><code><span class="sf3b2">.icon-1_QxNX</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15832</td><td class="sf3b2"><code><span class="sf3b2">.icon-1_QxNX</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">15833</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--text-muted)</span></code></td>
+<td class="ln">15833</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--text-muted)</span></code></td>
+</tr>
+<tr>
+<td class="ln">15834</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15834</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15835</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15835</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15836</td><td class="sf3b2"><code><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15836</td><td class="sf3b2"><code><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d4" href="#d4">.</a>15837</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--channels-default)</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">15837</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--channels-default)</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15838</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15838</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15839</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15839</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15840</td><td class="sf3b2"><code><span class="sf3b2">.modeMuted-3osy7j</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15840</td><td class="sf3b2"><code><span class="sf3b2">.modeMuted-3osy7j</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15841</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-1ucjTd</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15841</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-1ucjTd</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">15842</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--interactive-hover)</span></code></td>
+<td class="ln">15842</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--interactive-hover)</span></code></td>
+</tr>
+<tr>
+<td class="ln">15843</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15843</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15844</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15844</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15845</td><td class="sf3b2"><code><span class="sf3b2">.modeConnected-2IEL4z</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15845</td><td class="sf3b2"><code><span class="sf3b2">.modeConnected-2IEL4z</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15846</td><td class="sf3b2"><code><span class="sf3b2">.modeConnected-2IEL4z</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15846</td><td class="sf3b2"><code><span class="sf3b2">.modeConnected-2IEL4z</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15847</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15847</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15848</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15848</td><td class="sf3b2"><code><span class="sf3b2">.modeSelected-1zApJ_</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15849</td><td class="sf3b2"><code><span class="sf3b2">.modeUnread-1zpFdA</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15849</td><td class="sf3b2"><code><span class="sf3b2">.modeUnread-1zpFdA</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15850</td><td class="sf3b2"><code><span class="sf3b2">.modeUnread-1zpFdA</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15850</td><td class="sf3b2"><code><span class="sf3b2">.modeUnread-1zpFdA</span><span class="sf11b2">:</span><span class="sf3b2">hover</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15851</td><td class="sf3b2"><code><span class="sf3b2">.notInteractive-YF5EXq.modeConnected-2I<wbr>EL4z</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+<td class="ln">15851</td><td class="sf3b2"><code><span class="sf3b2">.notInteractive-YF5EXq.modeConnected-2I<wbr>EL4z</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">15852</td><td class="sf3b2"><code><span class="sf3b2">.notInteractive-YF5EXq.modeSelected-1zA<wbr>pJ_</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15852</td><td class="sf3b2"><code><span class="sf3b2">.notInteractive-YF5EXq.modeSelected-1zA<wbr>pJ_</span><span class="sf11b2"> </span><span class="sf3b2">.name-3_Dsmg</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d5" href="#d5">.</a>15853</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--interactive-active)</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">15853</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--interactive-active)</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15854</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15854</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15855</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15855</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15856</td><td class="sf3b2"><code><span class="sf3b2">.unread-3zKkbm</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15856</td><td class="sf3b2"><code><span class="sf3b2">.unread-3zKkbm</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">15857</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--interactive-active)</span></code></td>
+<td class="ln">15857</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--interactive-active)</span></code></td>
+</tr>
+<tr>
+<td class="ln">15858</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">15858</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">15859</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">15859</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">15860</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-35wsBm</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">15860</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-35wsBm</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">15861</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--background-secondary)</span><span class="sf11b2">;</span></code></td>
+<td class="ln">15861</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">background-color</span><span class="sf11b2">: </span><span class="sf12b2">var(--background-secondary)</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">15862</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 4px</span><span class="sf11b2">;</span></code></td>
+<td class="ln">15862</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 4px</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">34979</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">flex: 1 0 auto</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34979</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">flex: 1 0 auto</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34980</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-direction: column</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34980</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-direction: column</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34981</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">flex-direction: column</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34981</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">flex-direction: column</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34982</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-webkit-box-pack: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34982</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-webkit-box-pack: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34983</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-pack: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34983</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-pack: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34984</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">justify-content: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34984</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">justify-content: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34985</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-webkit-box-align: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34985</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-webkit-box-align: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34986</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-align: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34986</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">-ms-flex-align: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34987</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">align-items: center</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34987</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">align-items: center</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d6" href="#d6">.</a>34988</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background-color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--background-primary)</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">34988</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background-color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--background-primary)</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">34989</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">34989</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">34990</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">34990</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">34991</td><td class="sf3b2"><code><span class="sf3b2">.splashImage-13vBzp</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">34991</td><td class="sf3b2"><code><span class="sf3b2">.splashImage-13vBzp</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">34992</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">width</span><span class="sf11b2">: </span><span class="sf12b2">400px</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34992</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">width</span><span class="sf11b2">: </span><span class="sf12b2">400px</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">34993</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">margin-bottom</span><span class="sf11b2">: </span><span class="sf12b2">24px</span></code></td>
+<td class="ln">34993</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">margin-bottom</span><span class="sf11b2">: </span><span class="sf12b2">24px</span></code></td>
+</tr>
+<tr>
+<td class="ln">34994</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">34994</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">34995</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">34995</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">34996</td><td class="sf3b2"><code><span class="sf3b2">.splashHeader-ehL7gZ</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">34996</td><td class="sf3b2"><code><span class="sf3b2">.splashHeader-ehL7gZ</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">34997</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--header-primary)</span><span class="sf11b2">;</span></code></td>
+<td class="ln">34997</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">color</span><span class="sf11b2">: </span><span class="sf12b2">var(--header-primary)</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">48789</td><td class="sf3b2"><code><span class="sf3b2">.channelIcon-1TvDoP</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">48789</td><td class="sf3b2"><code><span class="sf3b2">.channelIcon-1TvDoP</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">48790</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">width</span><span class="sf11b2">: </span><span class="sf12b2">16px</span><span class="sf11b2">;</span></code></td>
+<td class="ln">48790</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">width</span><span class="sf11b2">: </span><span class="sf12b2">16px</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">48791</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 16px</span><span class="sf11b2">;</span></code></td>
+<td class="ln">48791</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 16px</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">48792</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">margin</span><span class="sf11b2">: </span><span class="sf12b2">0 8px</span></code></td>
+<td class="ln">48792</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">margin</span><span class="sf11b2">: </span><span class="sf12b2">0 8px</span></code></td>
+</tr>
+<tr>
+<td class="ln">48793</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">48793</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">48794</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">48794</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">48795</td><td class="sf3b2"><code><span class="sf3b2">.channelIcon-1TvDoP</span><span class="sf11b2">,</span></code></td>
+<td class="ln">48795</td><td class="sf3b2"><code><span class="sf3b2">.channelIcon-1TvDoP</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">48796</td><td class="sf3b2"><code><span class="sf3b2">.channelName-2wrHHc</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">48796</td><td class="sf3b2"><code><span class="sf3b2">.channelName-2wrHHc</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">48797</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">height</span><span class="sf11b2">: </span><span class="sf12b2">16px</span><span class="sf11b2">;</span></code></td>
+<td class="ln">48797</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">height</span><span class="sf11b2">: </span><span class="sf12b2">16px</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d7" href="#d7">.</a>48798</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background-color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--background-accent)</span><span class="sf11b18">;</span>&nbsp;</code></td>
+<td class="ln">48798</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #606060; background-color: #ddffdd; "> &nbsp; &nbsp;</span><span style="color: #000080; background-color: #ddffdd; ">background-color</span><span style="color: #606060; background-color: #ddffdd; ">: </span><span style="color: #800000; background-color: #ddffdd; ">var(--background-accent)</span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">48799</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">48799</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">48800</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">48800</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">48801</td><td class="sf3b2"><code><span class="sf3b2">.channelName-2wrHHc</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">48801</td><td class="sf3b2"><code><span class="sf3b2">.channelName-2wrHHc</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">48802</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 8px</span></code></td>
+<td class="ln">48802</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">border-radius: 8px</span></code></td>
+</tr>
+<tr>
+<td class="ln">48803</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">48803</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">48804</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">48804</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">48805</td><td class="sf3b2"><code><span class="sf3b2">.container-PNkimc</span><span class="sf11b2"> {</span></code></td>
+<td class="ln">48805</td><td class="sf3b2"><code><span class="sf3b2">.container-PNkimc</span><span class="sf11b2"> {</span></code></td>
+</tr>
+<tr>
+<td class="ln">48806</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">display</span><span class="sf11b2">: </span><span class="sf12b2">-webkit-box</span><span class="sf11b2">;</span></code></td>
+<td class="ln">48806</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">display</span><span class="sf11b2">: </span><span class="sf12b2">-webkit-box</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr>
+<td class="ln">48807</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">display</span><span class="sf11b2">: </span><span class="sf12b2">-ms-flexbox</span><span class="sf11b2">;</span></code></td>
+<td class="ln">48807</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf20b2">display</span><span class="sf11b2">: </span><span class="sf12b2">-ms-flexbox</span><span class="sf11b2">;</span></code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln"></td><td></td>
+<td class="ln"></td><td></td>
+</tr>
+</tbody>
+</table>
+</div></body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WinMerge File Compare Report</title>
+<style type="text/css">
+<!--
+td,th {word-break: break-all; font-size: 12pt;}
+tr { vertical-align: top; }
+.border { border-radius: 6px; border: 1px #a0a0a0 solid; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); overflow: hidden; }
+.ln {text-align: right; word-break: normal; background-color: lightgrey; box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.10);}
+.title {color: white; background-color: blue; vertical-align: top; padding: 4px 4px; background: linear-gradient(mediumblue, darkblue);}
+.sf3b2 {color: #000000; background-color: #ffffff; }
+.sf3b5 {color: #000000; background-color: #3399ff; }
+.sf3b14 {color: #000000; background-color: #ffaaaa; }
+.sf3b16 {color: #000000; background-color: #ff28ff; }
+.sf3b18 {color: #000000; background-color: #ff5959; }
+.sf3b19 {color: #000000; background-color: #e6968c; }
+.sf6b2 {color: #ffffff; background-color: #ffffff; }
+.sf6b5 {color: #ffffff; background-color: #3399ff; }
+.sf6b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf6b16 {color: #ffffff; background-color: #ff28ff; }
+.sf6b18 {color: #ffffff; background-color: #ff5959; }
+.sf6b19 {color: #ffffff; background-color: #e6968c; }
+.sf7b2 {color: #0000ff; background-color: #ffffff; font-weight: bold; }
+.sf7b5 {color: #0000ff; background-color: #3399ff; font-weight: bold; }
+.sf7b14 {color: #0000ff; background-color: #ffaaaa; font-weight: bold; }
+.sf7b16 {color: #0000ff; background-color: #ff28ff; font-weight: bold; }
+.sf7b18 {color: #0000ff; background-color: #ff5959; font-weight: bold; }
+.sf7b19 {color: #0000ff; background-color: #e6968c; font-weight: bold; }
+.sf8b2 {color: #800080; background-color: #ffffff; }
+.sf8b5 {color: #800080; background-color: #3399ff; }
+.sf8b14 {color: #800080; background-color: #ffaaaa; }
+.sf8b16 {color: #800080; background-color: #ff28ff; }
+.sf8b18 {color: #800080; background-color: #ff5959; }
+.sf8b19 {color: #800080; background-color: #e6968c; }
+.sf9b2 {color: #008000; background-color: #ffffff; }
+.sf9b5 {color: #008000; background-color: #3399ff; }
+.sf9b14 {color: #008000; background-color: #ffaaaa; }
+.sf9b16 {color: #008000; background-color: #ff28ff; }
+.sf9b18 {color: #008000; background-color: #ff5959; }
+.sf9b19 {color: #008000; background-color: #e6968c; }
+.sf10b2 {color: #ff0000; background-color: #ffffff; }
+.sf10b5 {color: #ff0000; background-color: #3399ff; }
+.sf10b14 {color: #ff0000; background-color: #ffaaaa; }
+.sf10b16 {color: #ff0000; background-color: #ff28ff; }
+.sf10b18 {color: #ff0000; background-color: #ff5959; }
+.sf10b19 {color: #ff0000; background-color: #e6968c; }
+.sf11b2 {color: #606060; background-color: #ffffff; }
+.sf11b5 {color: #606060; background-color: #3399ff; }
+.sf11b14 {color: #606060; background-color: #ffaaaa; }
+.sf11b16 {color: #606060; background-color: #ff28ff; }
+.sf11b18 {color: #606060; background-color: #ff5959; }
+.sf11b19 {color: #606060; background-color: #e6968c; }
+.sf12b2 {color: #800000; background-color: #ffffff; }
+.sf12b5 {color: #800000; background-color: #3399ff; }
+.sf12b14 {color: #800000; background-color: #ffaaaa; }
+.sf12b16 {color: #800000; background-color: #ff28ff; }
+.sf12b18 {color: #800000; background-color: #ff5959; }
+.sf12b19 {color: #800000; background-color: #e6968c; }
+.sf13b2 {color: #0080c0; background-color: #ffffff; }
+.sf13b5 {color: #0080c0; background-color: #3399ff; }
+.sf13b14 {color: #0080c0; background-color: #ffaaaa; }
+.sf13b16 {color: #0080c0; background-color: #ff28ff; }
+.sf13b18 {color: #0080c0; background-color: #ff5959; }
+.sf13b19 {color: #0080c0; background-color: #e6968c; }
+.sf15b2 {color: #ffffff; background-color: #ffffff; }
+.sf15b5 {color: #ffffff; background-color: #3399ff; }
+.sf15b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf15b16 {color: #ffffff; background-color: #ff28ff; }
+.sf15b18 {color: #ffffff; background-color: #ff5959; }
+.sf15b19 {color: #ffffff; background-color: #e6968c; }
+.sf17b2 {color: #ffffff; background-color: #ffffff; }
+.sf17b5 {color: #ffffff; background-color: #3399ff; }
+.sf17b14 {color: #ffffff; background-color: #ffaaaa; }
+.sf17b16 {color: #ffffff; background-color: #ff28ff; }
+.sf17b18 {color: #ffffff; background-color: #ff5959; }
+.sf17b19 {color: #ffffff; background-color: #e6968c; }
+.sf20b2 {color: #000080; background-color: #ffffff; }
+.sf20b5 {color: #000080; background-color: #3399ff; }
+.sf20b14 {color: #000080; background-color: #ffaaaa; }
+.sf20b16 {color: #000080; background-color: #ff28ff; }
+.sf20b18 {color: #000080; background-color: #ff5959; }
+.sf20b19 {color: #000080; background-color: #e6968c; }
+.sf21b2 {color: #0080c0; background-color: #ffffff; }
+.sf21b5 {color: #0080c0; background-color: #3399ff; }
+.sf21b14 {color: #0080c0; background-color: #ffaaaa; }
+.sf21b16 {color: #0080c0; background-color: #ff28ff; }
+.sf21b18 {color: #0080c0; background-color: #ff5959; }
+.sf21b19 {color: #0080c0; background-color: #e6968c; }
+-->
+</style>
+</head>
+<body>
+<div class="border"><table cellspacing="0" cellpadding="0" style="width: 100%; margin: 0; border: none;">
+<thead>
+<tr>
+<th class="title" style="width:1%"></th><th class="title" style="width:49.000000%">C:\Users\Katsu\Desktop\BD\DiscordDiffs\20-2-28\stableClasses20-2-26.css</th>
+<th class="title" style="width:1%"></th><th class="title" style="width:49.000000%">C:\Users\Katsu\Desktop\BD\DiscordDiffs\20-2-28\stableClasses20-2-28.css</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ln">4356</td><td class="sf3b2"><code><span class="sf3b2">.button-32WdHP</span><span class="sf11b2">:</span><span class="sf3b2">first-child</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4356</td><td class="sf3b2"><code><span class="sf3b2">.button-32WdHP</span><span class="sf11b2">:</span><span class="sf3b2">first-child</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4357</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4357</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4358</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4358</td><td class="sf3b2"><code><span class="sf3b2">.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4359</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4359</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4360</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4360</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4361</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4361</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4362</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H.wrapper-2a6GCs</span><span class="sf11b2">,</span></code></td>
+<td class="ln">4362</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H.wrapper-2a6GCs</span><span class="sf11b2">,</span></code></td>
+</tr>
+<tr>
+<td class="ln">4363</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4363</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4364</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4364</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d1" href="#d1">.</a>4365</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.cozy-3raOZG</span><span style="color: #606060; background-color: #ddffdd; "> </span><span style="color: #000000; background-color: #ddffdd; ">.contents-2mQqc9</span><span style="color: #606060; background-color: #ddffdd; ">,</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4366</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4365</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG.wrapper-2a6GCs</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4367</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4366</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4368</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4367</td><td class="sf3b2"><code><span class="sf3b2">.cozy-3raOZG</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4369</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4368</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4370</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4369</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4371</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4370</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4372</td><td class="sf3b2"><code><span class="sf3b2">.zalgo-jN1Ica.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4371</td><td class="sf3b2"><code><span class="sf3b2">.zalgo-jN1Ica.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.contents-2mQqc9</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4373</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">4372</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">4374</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.header-23xsNx</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">4373</td><td class="sf3b2"><code><span class="sf3b2">.compact-T3H92H</span><span class="sf11b2"> </span><span class="sf3b2">.header-23xsNx</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">11720</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11719</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11721</td><td class="sf3b2"><code><span class="sf3b2">.modal-3E8VRr</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11720</td><td class="sf3b2"><code><span class="sf3b2">.modal-3E8VRr</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11722</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11721</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11723</td><td class="sf3b2"><code><span class="sf3b2">.header-2Q64JQ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11722</td><td class="sf3b2"><code><span class="sf3b2">.header-2Q64JQ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11724</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11723</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11725</td><td class="sf3b2"><code><span class="sf3b2">.image-1j3iUd</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11724</td><td class="sf3b2"><code><span class="sf3b2">.image-1j3iUd</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11726</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11725</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11727</td><td class="sf3b2"><code><span class="sf3b2">.title-1POJ_I</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11726</td><td class="sf3b2"><code><span class="sf3b2">.title-1POJ_I</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11728</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11727</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d2" href="#d2">.</a>11729</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.byline-lT_lnw</span><span style="color: #606060; background-color: #ddffdd; "> </span>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11730</td><td style="color: #000000; background-color: #ddffdd; "><code>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11731</td><td class="sf3b2"><code><span class="sf3b2">.close-AeLfzH</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11728</td><td class="sf3b2"><code><span class="sf3b2">.close-AeLfzH</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11732</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11729</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11733</td><td class="sf3b2"><code><span class="sf3b2">.content-2sIOFL</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11730</td><td class="sf3b2"><code><span class="sf3b2">.content-2sIOFL</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11734</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11731</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11735</td><td class="sf3b2"><code><span class="sf3b2">.item-2MjizN</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11732</td><td class="sf3b2"><code><span class="sf3b2">.item-2MjizN</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11736</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11733</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d3" href="#d3">.</a>11737</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.item-2MjizN</span><span style="color: #606060; background-color: #ddffdd; ">,</span></code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11738</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.itemWithCTA-3LTxl1</span><span style="color: #606060; background-color: #ddffdd; "> </span>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11739</td><td style="color: #000000; background-color: #ddffdd; "><code>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11740</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.itemWithCTA-3LTxl1</span><span style="color: #606060; background-color: #ddffdd; "> </span>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11741</td><td style="color: #000000; background-color: #ddffdd; "><code>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11742</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.itemCta-1lK8Po</span><span style="color: #606060; background-color: #ddffdd; "> </span>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11743</td><td style="color: #000000; background-color: #ddffdd; "><code>&nbsp;</code></td>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11744</td><td class="sf3b2"><code><span class="sf3b2">.separator-21eqch</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11734</td><td class="sf3b2"><code><span class="sf3b2">.separator-21eqch</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11745</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11735</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11746</td><td class="sf3b2"><code><span class="sf3b2">.icon--V_2sG</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11736</td><td class="sf3b2"><code><span class="sf3b2">.icon--V_2sG</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11747</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11737</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11748</td><td class="sf3b2"><code><span class="sf11b2">@</span><span class="sf3b2">-webkit-keyframes</span><span class="sf11b2"> </span><span class="sf3b2">discovery-anim-gdK2yE</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11738</td><td class="sf3b2"><code><span class="sf11b2">@</span><span class="sf3b2">-webkit-keyframes</span><span class="sf11b2"> </span><span class="sf3b2">discovery-anim-gdK2yE</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11749</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11739</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11750</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">50%</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11740</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">50%</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11751</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">11741</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">11752</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">to</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">11742</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">to</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">19882</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19872</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19883</td><td class="sf3b2"><code><span class="sf3b2">.customStatusContainer-3MngWi</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19873</td><td class="sf3b2"><code><span class="sf3b2">.customStatusContainer-3MngWi</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19884</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19874</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19885</td><td class="sf3b2"><code><span class="sf3b2">.noiseCancellationPopout-iRK2A0</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19875</td><td class="sf3b2"><code><span class="sf3b2">.noiseCancellationPopout-iRK2A0</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19886</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19876</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19887</td><td class="sf3b2"><code><span class="sf3b2">.noiseCancellationTooltip-h4yuQJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19877</td><td class="sf3b2"><code><span class="sf3b2">.noiseCancellationTooltip-h4yuQJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19888</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19878</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19889</td><td class="sf3b2"><code><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19879</td><td class="sf3b2"><code><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19890</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19880</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d4" href="#d4">.</a></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+<td class="ln">19881</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #000000; background-color: #ddffdd; ">.krispLink-2mtfLU</span><span style="color: #606060; background-color: #ddffdd; "> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"></td><td style="color: #000000; background-color: #e0e0ff; "><code>&nbsp;</code></td>
+<td class="ln">19882</td><td style="color: #000000; background-color: #ddffdd; "><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19891</td><td class="sf3b2"><code><span class="sf3b2">.micTestButton-m2rQFo</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19883</td><td class="sf3b2"><code><span class="sf3b2">.micTestButton-m2rQFo</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19892</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19884</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19893</td><td class="sf3b2"><code><span class="sf3b2">.theme-light</span><span class="sf11b2"> </span><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19885</td><td class="sf3b2"><code><span class="sf3b2">.theme-light</span><span class="sf11b2"> </span><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19894</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19886</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19895</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19887</td><td class="sf3b2"><code><span class="sf3b2">.theme-dark</span><span class="sf11b2"> </span><span class="sf3b2">.krispLogo-a9msDI</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19896</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19888</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19897</td><td class="sf3b2"><code><span class="sf3b2">.container-2lgZY8</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19889</td><td class="sf3b2"><code><span class="sf3b2">.container-2lgZY8</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19898</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">19890</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">19899</td><td class="sf3b2"><code><span class="sf3b2">.downloadProgressCircle-2hBlsA</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">19891</td><td class="sf3b2"><code><span class="sf3b2">.downloadProgressCircle-2hBlsA</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr height=1><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td><td style="background-color: black"></td></tr>
+<tr>
+<td class="ln">22875</td><td class="sf3b2"><code><span class="sf3b2">.mobileHeader-2xB92D</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">22867</td><td class="sf3b2"><code><span class="sf3b2">.mobileHeader-2xB92D</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22876</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">22868</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22877</td><td class="sf3b2"><code><span class="sf3b2">.desktopHeader-3za0nJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">22869</td><td class="sf3b2"><code><span class="sf3b2">.desktopHeader-3za0nJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22878</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">22870</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22879</td><td class="sf3b2"><code><span class="sf11b2">@</span><span class="sf3b2">media</span><span class="sf11b2"> (</span><span class="sf3b2">max-width</span><span class="sf11b2">:</span><span class="sf3b2">848px</span><span class="sf11b2">) </span></code></td>
+<td class="ln">22871</td><td class="sf3b2"><code><span class="sf11b2">@</span><span class="sf3b2">media</span><span class="sf11b2"> (</span><span class="sf3b2">max-width</span><span class="sf11b2">:</span><span class="sf3b2">848px</span><span class="sf11b2">) </span></code></td>
+</tr>
+<tr>
+<td class="ln">22880</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">22872</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22881</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">.desktopHeader-3za0nJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+<td class="ln">22873</td><td class="sf3b2"><code><span class="sf11b2"> &nbsp; &nbsp;</span><span class="sf3b2">.desktopHeader-3za0nJ</span><span class="sf11b2"> </span>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln">22882</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+<td class="ln">22874</td><td class="sf3b2"><code><span class="sf11b2">}</span></code></td>
+</tr>
+<tr>
+<td class="ln">22883</td><td class="sf3b2"><code>&nbsp;</code></td>
+<td class="ln">22875</td><td class="sf3b2"><code>&nbsp;</code></td>
+</tr>
+<tr>
+<td class="ln"><a name="d5" href="#d5">.</a>22884</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #008000; background-color: #ddffdd; ">/*# sourceMappingURL=0.a</span><span class="sf9b16">6689d5f76e395bb53a6<wbr></span><span style="color: #008000; background-color: #ddffdd; ">.css.map*/</span>&nbsp;</code></td>
+<td class="ln">22876</td><td style="color: #000000; background-color: #ddffdd; "><code><span style="color: #008000; background-color: #ddffdd; ">/*# sourceMappingURL=0.a</span><span class="sf9b16">85cb3ea4a52bfeddd53<wbr></span><span style="color: #008000; background-color: #ddffdd; ">.css.map*/</span>&nbsp;</code></td>
+</tr>
+</tbody>
+</table>
+</div></body>
+</html>
